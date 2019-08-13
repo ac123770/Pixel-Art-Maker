@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<title>Title</title>
+<style>
+h1:hover {Color: Blue}
+h2:hover {Color: Green}
+p:hover {Color: Red}
+h1, h2 {text-align: center;}
+p {text-align: center;
+Display: inline;}
+body {
+    text-align: center;
+}
+h1 {
+    font-family: Monoton;
+    font-size: 70px;
+    margin: 0.2em;
+}
+
+h2 {
+    margin: 1em 0 0.25em;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+input[type=number] {
+    width: 6em;
+}
+</style></head>
+
+
+
+<body><h1>Pixel Art Maker!</h1>
+<h2>Choose Grid Size:</h2>
+<form id="size Picker">
+<p>Grid Height</p>
+<input id= "inputHeight" type="number" name="width" min="1" value="1">
+<p>Grid Width</p>
+<input id="inputWidth" type="number" name="width" min="1" value="1">
+<button type="button" onclick="pixels.make Grid()">Submit</button></form>
+<h2>Pick a Color:</h2>
+<input type="color" id="colorPicker">
+<table id="pixelCanvas"></table>
+<h2>Design Canvas</h2>
+  <script>class Pixel Art {constructor() {this.color = document.get Element By Id('colorPicker');}
+make Grid(){
+this.delete Grid();
+let width = document.get Element By Id('inputHeight').value;
+let height = document.get Element By Id('inputWidth').value;
+
+for (let row = 0; row < width; row++){
+var x = document.get Element By Id('pixelCanvas').insert Row(row);
+for (let column = 0; column < height; column++){
+var z = x.insert Cell(column);
+z.add Event Listener("click", function (){
+this.set Attribute("style", `background-color: ${pixels.color.value}`) }) };};
+var table = document.get Element By Id("pixelCanvas");
+table.delete Row(-1)};
+Delete Grid(){
+var table = document.get Element By Id("pixelCanvas");
+for(var i = table.rows.length - 1; i > 0; i--)
+{table.delete Row(i);}}}
+let pixels = new Pixel Art();</script></body>
